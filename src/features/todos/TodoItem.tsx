@@ -1,5 +1,4 @@
 import React from "react";
-import Todo from "./todosSlice";
 
 interface TodoItem {
   id: string;
