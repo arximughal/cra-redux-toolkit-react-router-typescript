@@ -4,6 +4,7 @@ import { Provider } from "react-redux";
 import store from "./app/store";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import './theme/index.scss';
 
 // Render the app component wrapped with Provider component to pass the redux store to all components
 ReactDOM.render(
