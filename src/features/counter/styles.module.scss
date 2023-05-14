@@ -1,0 +1,14 @@
+@import '/src/theme/colors.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  .counterValue {
+    display: inline-flex;
+    font-size: 42px;
+    background: $theme-accent;
+    padding: 10px 25px;
+    font-weight: bold;
+  }
+}

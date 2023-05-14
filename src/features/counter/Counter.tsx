@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../app/rootReducer";
 import { increment, decrement, incrementByAmount } from "./counterSlice";
+import Button from "../../components/Button";
+import styles from "./styles.module.scss";
 
 // Define a counter component that uses the redux state and actions
 const Counter: React.FC = () => {
@@ -45,13 +47,20 @@ const Counter: React.FC = () => {
 
   // Return the JSX element for the counter component
   return (
-    <div>
+    <div className={styles.container}>
       <h1>Counter</h1>
-      <p>The current counter value is {counter}</p>
-      <button onClick={handleIncrement}>Increment</button>
-      <button onClick={handleDecrement}>Decrement</button>
-      <input value={incrementAmount} onChange={handleIncrementAmountChange} />
-      <button onClick={handleIncrementByAmount}>Increment by amount</button>
+      <div>
+        <p>
+          The current counter value is{" "}
+          <span className={styles.counterValue}>{counter}</span>
+        </p>
+        <Button onClick={handleIncrement}>Increment</Button>
+        <Button onClick={handleDecrement}>Decrement</Button>
+      </div>
+      <div>
+        <input value={incrementAmount} onChange={handleIncrementAmountChange} />
+        <Button onClick={handleIncrementByAmount}>Increment by amount</Button>
+      </div>
     </div>
   );
 };
