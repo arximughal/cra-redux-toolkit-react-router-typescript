@@ -2,27 +2,21 @@ import React from "react";
 import Home from "../pages/Home";
 import About from "../pages/About";
 import NotFound from "../pages/NotFound";
-
-interface RoutesArray {
-  path: String;
-  exact?: boolean;
-  component: React.ReactElement;
-}
+import type { RouteObject } from "react-router-dom";
 
 // Define an array of route objects that specify the path and component for each route
-const routes = [
+const routes: RouteObject[] = [
   {
     path: "/",
-    exact: true,
-    component: Home,
+    element: <Home />,
   },
   {
     path: "/about",
-    component: About,
+    element: <About />,
   },
   {
     path: "*",
-    component: NotFound,
+    element: <NotFound />,
   },
 ];
 
