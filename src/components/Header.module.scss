@@ -1,0 +1,57 @@
+@import "/src/theme/colors.scss";
+
+.header {
+  position: fixed;
+  width: 100vw;
+  height: 68px;
+  background: $theme-accent;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  div, nav {
+    flex: 1 0;
+  }
+
+  div {
+    padding-left: 25px;
+    span {
+      font-size: 18px;
+      font-weight: bold;
+      color: $accent-accent-dark;
+    }
+  }
+
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 25px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    li {
+      float: left;
+      a {
+        display: inline-block;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 12px 20px;
+        border: 1px transparent;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 14px;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          background: $accent-accent-dark;
+          color: $white;
+        }
+      }
+    }
+  }
+}

@@ -1,11 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import styles from "./Header.module.scss";
 
 // Define a header component that renders a navigation bar with links
 const Header: React.FC = () => {
   // Return the JSX element for the header component
   return (
-    <header>
+    <header className={styles.header}>
+      <div className={styles.navbarBrand}>
+        <span>CRA Boilerplate</span>
+      </div>
       <nav>
         <ul>
           <li>
