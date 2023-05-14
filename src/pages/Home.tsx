@@ -37,8 +37,14 @@ const Home: React.FC = () => {
           (scss modules).
         </p>
       </div>
-      <Counter />
-      <TodoList />
+      <div className={styles.demoContainer}>
+        <div>
+          <Counter />
+        </div>
+        <div>
+          <TodoList />
+        </div>
+      </div>
     </div>
   );
 };

@@ -34,4 +34,15 @@
       padding: 0 69px;
     }
   }
+
+  .demoContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    
+    div {
+      flex: 1;
+      padding: 25px;
+    }
+  }
 }
